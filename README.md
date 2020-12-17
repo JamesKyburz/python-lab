@@ -8,3 +8,9 @@ pre-commit install
 ```sh
 pip freeze > requirements.txt
 ```
+
+# run
+
+```sh
+./hello.py
+```
