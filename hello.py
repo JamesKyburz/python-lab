@@ -2,6 +2,7 @@
 
 import re
 import sys
+from functools import reduce
 
 items = [0, 3, 2, 1, 4, 5]
 items.sort()
@@ -49,10 +50,20 @@ print("format 3 values {0}, {1}, and {2}".format(1, 2, 3))
 
 x = {"key1": "value1 from x", "key2": "value2 from x"}
 y = {"key2": "value2 from y", "key3": "value3 from y"}
-x_or_y = x | y
+z = dict(zip(["one", "two", "three"], [1, 2, 3]))
 
 print("x", x)
 print("y", y)
-print("x_or_y", x_or_y)
+print("z", z)
+
+print("x keys", list(x))
+print("x values", list(x.values()))
+
+print("map", list(map(lambda x: x * 3, [1, 2, 3])))
+print("reduce+", reduce(lambda x, y: x + y, [1, 2, 3, 4], 0))
+print("reduce*", reduce(lambda x, y: x * y, [1, 2, 3, 4], 1))
+
+if __name__ == "__main__":
+    print("I am main")
 
 print("all ok")
