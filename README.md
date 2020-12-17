@@ -20,3 +20,10 @@ pip freeze > requirements.txt
 ```sh
 python -OO -m py_compile hello.py
 ```
+
+# compile to executable
+
+```sh
+pyinstaller hello.py
+./dist/hello/hello
+```
