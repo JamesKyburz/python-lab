@@ -8,8 +8,14 @@ items = [0, 3, 2, 1, 4, 5]
 items.sort()
 
 even = [x for x in items if x % 2 == 0]
+odd = [x for x in items if x % 2 != 0]
 
 print(even)
+print(odd)
+
+zipped = list(zip(even, odd))
+
+print([x for sublist in zipped for x in sublist])
 
 print([x for x in filter(lambda x: x % 2 == 0, range(5))])
 
