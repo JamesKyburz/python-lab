@@ -14,3 +14,9 @@ pip freeze > requirements.txt
 ```sh
 ./hello.py
 ```
+
+# compile to byte code
+
+```sh
+python -OO -m py_compile hello.py
+```
